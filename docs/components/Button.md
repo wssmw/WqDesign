@@ -8,8 +8,8 @@
 
 ## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| type | 按钮类型 | string | default |
-| disabled | 是否禁用 | boolean | false |
-| loading | 是否加载中 | boolean | false |
+| 参数     | 说明       | 类型    | 默认值  |
+| -------- | ---------- | ------- | ------- |
+| type     | 按钮类型   | string  | default |
+| disabled | 是否禁用   | boolean | false   |
+| loading  | 是否加载中 | boolean | false   |

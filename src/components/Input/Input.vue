@@ -14,18 +14,18 @@ export default {
   props: {
     placeholder: {
       type: String,
-      default: ''
+      default: '',
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   methods: {
     handleInput(e) {
       this.$emit('input', e.target.value)
-    }
-  }
+    },
+  },
 }
 </script>
 

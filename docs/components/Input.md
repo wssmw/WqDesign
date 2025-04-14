@@ -6,12 +6,10 @@
 
 用于输入文本内容的表单控件。
 
-
-
 ## API
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model | 绑定值 | string | - |
-| placeholder | 占位符 | string | - |
-| disabled | 是否禁用 | boolean | false |
+| 参数        | 说明     | 类型    | 默认值 |
+| ----------- | -------- | ------- | ------ |
+| v-model     | 绑定值   | string  | -      |
+| placeholder | 占位符   | string  | -      |
+| disabled    | 是否禁用 | boolean | false  |

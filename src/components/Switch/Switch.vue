@@ -1,5 +1,9 @@
 <template>
-  <div class="switch" :class="{ 'is-active': modelValue, 'switch--active': modelValue }" @click="toggle">
+  <div
+    class="switch"
+    :class="{ 'is-active': modelValue, 'switch--active': modelValue }"
+    @click="toggle"
+  >
     <div class="switch__track"></div>
     <div class="switch__thumb"></div>
   </div>
@@ -10,21 +14,21 @@ export default {
   props: {
     modelValue: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   emits: ['update:modelValue'],
   methods: {
     toggle() {
-      this.$emit('update:modelValue', !this.modelValue);
-    }
-  }
-};
+      this.$emit('update:modelValue', !this.modelValue)
+    },
+  },
+}
 </script>
 
 <style scoped>
 .switch--active .switch__track {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .switch {

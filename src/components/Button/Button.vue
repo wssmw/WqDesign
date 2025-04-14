@@ -17,28 +17,30 @@ export default {
       type: String,
       default: 'default', // 默认按钮样式
       validator: (value) => {
-        return ['default', 'primary', 'success', 'warning', 'danger'].includes(value)
-      }
+        return ['default', 'primary', 'success', 'warning', 'danger'].includes(
+          value,
+        )
+      },
     },
     size: {
       type: String,
       default: 'medium', // 默认中等大小
       validator: (value) => {
         return ['small', 'medium', 'large'].includes(value)
-      }
+      },
     },
     disabled: {
       type: Boolean,
-      default: false // 默认不禁用
-    }
+      default: false, // 默认不禁用
+    },
   },
   methods: {
     handleClick(e) {
       if (!this.disabled) {
         this.$emit('click', e)
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

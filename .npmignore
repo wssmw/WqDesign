@@ -1,0 +1,37 @@
+# 忽略测试文件
+tests/
+
+# 忽略构建工具配置
+build/
+
+# 忽略文档
+/docs/
+
+# 忽略IDE配置
+.vscode/
+
+# 忽略Git相关文件
+.git/
+.gitignore
+
+# 忽略Husky配置
+.husky/
+
+# 忽略Prettier配置
+.prettierignore
+.prettierrc
+
+# 忽略ESLint配置
+eslint.config.js
+
+# 忽略Vite缓存
+.vite/
+
+# 忽略开发环境文件
+index.html
+
+# 忽略源代码
+src/
+
+# 忽略包管理文件
+package-lock.json

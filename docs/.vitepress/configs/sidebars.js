@@ -5,25 +5,23 @@ import path from 'path'
 function generateComponentsSidebar() {
   const componentsDir = path.join(process.cwd(), 'docs/components')
   const files = fs.readdirSync(componentsDir)
-  
+
   const items = files
-    .filter(file => file.endsWith('.md'))
-    .map(file => {
+    .filter((file) => file.endsWith('.md'))
+    .map((file) => {
       const name = file.replace('.md', '')
       return {
         text: name,
-        link: `/components/${name}`
+        link: `/components/${name}`,
       }
     })
 
   return {
     text: 'Components',
-    items: items
+    items: items,
   }
 }
 
-console.log(generateComponentsSidebar(),'testwss')
+console.log(generateComponentsSidebar(), 'testwss')
 
-export const sidebar = [
-  generateComponentsSidebar()
-]
+export const sidebar = [generateComponentsSidebar()]
