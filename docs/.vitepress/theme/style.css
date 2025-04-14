@@ -1,0 +1,6 @@
+/* 调整操作按钮容器为 flex 布局并右对齐 */
+.vitepress-demo-preview-description__handle-btn {
+  display: flex;
+  justify-content: flex-end!important;
+  padding-right: 20px;
+}
