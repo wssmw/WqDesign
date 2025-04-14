@@ -18,6 +18,12 @@ export default defineConfig([
   },
   pluginVue.configs['flat/essential'],
   {
+    files: ['**/*.vue'],
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
+  {
     files: ['**/*.json'],
     plugins: { json },
     language: 'json/json',
