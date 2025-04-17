@@ -1,12 +1,23 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+  ],
   build: {
     lib: {
-      entry: 'src/components/index.js', // 组件库入口文件
+      entry: 'packages/components/index.js', // 组件库入口文件
       name: 'MyComponentLibrary', // 库的全局变量名
       fileName: (format) => `wq_design.${format}.js`, // 打包后文件名格式
     },
