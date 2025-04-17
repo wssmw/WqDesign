@@ -4,10 +4,15 @@ import {
   componentPreview,
 } from '@vitepress-demo-preview/plugin'
 import { sidebar } from './configs'
+
 export default defineConfig({
-  title: 'My Awesome Project',
+  title: 'WqDesign',
   description: 'A VitePress Site',
-  // 添加 markdown 配置
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/logo.png' }],
+  ],
   markdown: {
     config(md) {
       md.use(containerPreview)
@@ -15,14 +20,16 @@ export default defineConfig({
     },
   },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-    ],
-
+    logo: '/logo.svg',
     sidebar,
-
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '...',
+        apiKey: '...',
+        indexName: '...',
+      },
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
