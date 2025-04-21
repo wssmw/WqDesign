@@ -17,7 +17,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: 'packages/components/index.js', // 组件库入口文件
+      entry: 'packages/index.js', // 组件库入口文件
       name: 'MyComponentLibrary', // 库的全局变量名
       fileName: (format) => `wq_design.${format}.js`, // 打包后文件名格式
     },

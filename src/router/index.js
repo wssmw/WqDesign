@@ -4,18 +4,18 @@ const routes = [
   {
     path: '/',
     name: 'Overview',
-    component: () => import('../view/Overview.vue')
+    component: () => import('../view/Overview.vue'),
   },
   {
     path: '/components/button',
     name: 'Button',
-    component: () => import('../view/components/Button.vue')
+    component: () => import('../view/components/Button.vue'),
   },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
-export default router 
+export default router

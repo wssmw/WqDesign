@@ -3,7 +3,10 @@ import { AntDesignContainer } from '@vitepress-demo-preview/component'
 import '@vitepress-demo-preview/component/dist/style.css'
 import './style.css' // 引入全局样式文件，用于覆盖默认样式，例如修改标题颜色、字体大小等
 
-import * as components from '../../../src/components'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+import * as components from '../../../packages/components'
 console.log(components, 'components')
 // 全局注册所有组件
 
@@ -11,6 +14,7 @@ console.log(components, 'components')
 export default {
   ...theme,
   enhanceApp({ app }) {
+    app.use(ElementPlus)
     app.component('demo-preview', AntDesignContainer),
       Object.entries(components).forEach(([name, component]) => {
         app.component(name, component)
