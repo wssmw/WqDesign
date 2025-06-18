@@ -1,7 +1,7 @@
 {
   "name": "wq_design",
   "private": false,
-  "version": "0.0.1-test-02",
+  "version": "0.0.2",
   "type": "module",
   "main": "./dist/wq_design.umd.js",
   "module": "./dist/wq_design.es.js",
@@ -19,6 +19,7 @@
     "format": "prettier --write . && eslint --fix ."
   },
   "dependencies": {
+    "axios": "^1.8.4",
     "element-plus": "^2.9.7",
     "less": "^4.3.0",
     "vue": "^3.5.13",

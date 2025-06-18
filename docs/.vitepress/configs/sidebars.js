@@ -6,8 +6,8 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // 自动生成组件侧边栏配置
-function generateComponentsSidebar() {
-  const componentsDir = path.join(__dirname, '../../components')
+function generateComponentsSidebar(src, category) {
+  const componentsDir = path.join(__dirname, src)
   if (!fs.existsSync(componentsDir)) {
     return []
   }
@@ -19,7 +19,7 @@ function generateComponentsSidebar() {
       const name = file.replace('.md', '')
       return {
         text: name,
-        link: `/components/${name}`,
+        link: `/${category}/${name}`,
       }
     })
 }
@@ -37,14 +37,56 @@ const commonSidebar = [
   {
     text: 'components',
     collapsed: false,
-    items: generateComponentsSidebar(),
+    items: generateComponentsSidebar('../../components', 'components'),
+  },
+  {
+    text: 'HTML',
+    collapsed: false,
+    items: generateComponentsSidebar('../../HTML', 'HTML'),
+  },
+  {
+    text: 'CSS',
+    collapsed: false,
+    items: generateComponentsSidebar('../../CSS', 'CSS'),
+  },
+  {
+    text: 'JavaScript',
+    collapsed: false,
+    items: generateComponentsSidebar('../../JavaScript', 'JavaScript'),
+  },
+  {
+    text: 'Vue',
+    collapsed: false,
+    items: generateComponentsSidebar('../../Vue', 'Vue'),
+  },
+  // {
+  //   text: 'React 教程',
+  //   collapsed: false,
+  //   items: generateComponentsSidebar('../../React', 'React'),
+  // },
+  // {
+  //   text: 'Node.js 教程',
+  //   collapsed: false,
+  //   items: generateComponentsSidebar('../../Node', 'Node'),
+  // },
+  {
+    text: 'Other',
+    collapsed: false,
+    items: generateComponentsSidebar('../../Other', 'Other'),
   },
 ]
 
 // 生成完整的侧边栏配置
 export const sidebar = {
   '/guide/': commonSidebar,
-  '/components/': commonSidebar, // 在 components 路径下也使用相同的侧边栏
+  '/components/': commonSidebar,
+  '/HTML/': commonSidebar,
+  '/CSS/': commonSidebar,
+  '/JavaScript/': commonSidebar,
+  '/Vue/': commonSidebar,
+  // '/React/': commonSidebar,
+  // '/Node/': commonSidebar,
+  '/Other/': commonSidebar,
 }
 
 console.log(sidebar, 'sidebar')
