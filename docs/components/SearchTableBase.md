@@ -4,7 +4,7 @@ SearchTableBase 是一个集成了搜索表单和数据表格的组件，提供�
 
 ## 基础用法
 
-<preview path="../demos/SearchTableBase/basic.vue" title="基础用法" description="SearchTableBase 组件的基础用法"></preview>
+<preview path="../demos/components/SearchTableBase/basic.vue" title="基础用法" description="SearchTableBase 组件的基础用法"></preview>
 
 ## 属性
 

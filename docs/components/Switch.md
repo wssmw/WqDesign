@@ -1,6 +1,6 @@
 # Switch 开关
 
-<preview path="../demos/Switch/Basic.vue" title="基础用法" description="Switch 组件的基础用法"></preview>
+<preview path="../demos/components/Switch/Basic.vue" title="基础用法" description="Switch 组件的基础用法"></preview>
 
 ## 介绍
 

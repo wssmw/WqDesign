@@ -1,6 +1,6 @@
 # Input 输入框
 
-<preview path="../demos/Input/Basic.vue" title="基础用法" description="Input 组件的基础用法"></preview>
+<preview path="../demos/components/Input/Basic.vue" title="基础用法" description="Input 组件的基础用法"></preview>
 
 ## 介绍
 

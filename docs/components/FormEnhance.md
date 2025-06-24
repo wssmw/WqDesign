@@ -4,7 +4,7 @@ FormEnhance 是一个基于 Element Plus 的表单组件增强封装，提供了
 
 ## 基础用法
 
-<preview path="../demos/FormEnhance/basic.vue" title="基础用法" description="FormEnhance 组件的基础用法，包含输入框、数字输入框、选择器、时间选择器和开关"></preview>
+<preview path="../demos/components/FormEnhance/basic.vue" title="基础用法" description="FormEnhance 组件的基础用法，包含输入框、数字输入框、选择器、时间选择器和开关"></preview>
 
 ## 属性
 

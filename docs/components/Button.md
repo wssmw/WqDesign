@@ -1,6 +1,6 @@
 # Button 按钮
 
-<preview path="../demos/Button/Basic.vue" title="基础用法" description="Button 组件的基础用法"></preview>
+<preview path="../demos/components/Button/Basic.vue" title="基础用法" description="Button 组件的基础用法"></preview>
 
 ## 介绍
 
