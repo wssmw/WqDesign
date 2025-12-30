@@ -14,7 +14,6 @@ export default {
   datetimerange: defineAsyncComponent(() => import('./FormItems/DateItem.vue')),
   year: defineAsyncComponent(() => import('./FormItems/DateItem.vue')),
   month: defineAsyncComponent(() => import('./FormItems/DateItem.vue')),
-  dates: defineAsyncComponent(() => import('./FormItems/DateItem.vue')),
   week: defineAsyncComponent(() => import('./FormItems/DateItem.vue')),
 
   select: defineAsyncComponent(() => import('./FormItems/SelectItem.vue')),

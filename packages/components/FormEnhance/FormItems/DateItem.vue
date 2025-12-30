@@ -113,7 +113,6 @@ const dateType = computed(() => {
     datetimerange: 'datetimerange',
     year: 'year',
     month: 'month',
-    dates: 'dates', // 多日期
     week: 'week',
   }
   return typeMap[props.info.type] || 'date'

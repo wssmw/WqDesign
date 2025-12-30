@@ -6,8 +6,21 @@ FormEnhance 是一个基于 Element Plus 的表单组件增强封装，提供了
 
 <preview path="../demos/components/FormEnhance/basic.vue" title="基础用法" description="FormEnhance 组件的基础用法，包含输入框、数字输入框、选择器、时间选择器和开关"></preview>
 
+## 动态显示
+FormEnhance 组件支持通过linking字段判断当前表单显示与隐藏。
+
+### linking字段
 
 
+每个linking可以接收以下参数：
+
+| 参数名 | 说明 | 类型 |
+|--------|------|------|
+| `key` | 根据那个字段进行判断 | String |
+| `value` | key对应的取值,当value等于key时,会执行linkingType对应的显隐 | any |
+| `linkingType` | 整个表单数据对象 | ['show','hidden'] |
+
+<preview path="../demos/components/FormEnhance/linking.vue" title="动态显示" description="FormEnhance 组件支持通过linking字段判断当前表单显示与隐藏。"></preview>
 
 ## 插槽使用
 
@@ -54,7 +67,6 @@ FormEnhance 组件支持通过插槽自定义表单项的内容。插槽名称�
 | submitShow | 是否显示提交按钮 | Boolean | 'true' |
 | submitPosition | 提交按钮位置 | Boolean | 'bottom' ['top', 'bottom'] |
 | submitText | 提交按钮文案 | String | 提交 |
-| submitLong | 待研究 | String | 提交 |
 | submitShape | 提交按钮是否为圆角按钮 | Boolean | false |
 | resetShow | 是否显示重置按钮 | Boolean | true |
 | resetText | 重置按钮文案 | String | 重置 |
@@ -110,7 +122,6 @@ FormEnhance 组件支持通过插槽自定义表单项的内容。插槽名称�
 - datetimerange: 时间段(带时分秒)
 - year: 年
 - month: 月
-- dates: 多日期 (待研究)
 - week: 星期
 
 - select: 选择器

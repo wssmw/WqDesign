@@ -77,7 +77,6 @@
         <el-button
           :size="size"
           @click.prevent="submitForm"
-          :long="submitLong"
           :round="submitShape"
           type="primary"
         >
@@ -142,10 +141,6 @@ const props = defineProps({
   submitText: {
     type: String,
     default: '提交',
-  },
-  submitLong: {
-    type: Boolean,
-    default: false,
   },
   submitShape: {
     type: Boolean,
