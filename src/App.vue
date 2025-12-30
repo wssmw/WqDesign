@@ -37,6 +37,7 @@
             <el-menu-item index="/components/layout">Layout 布局</el-menu-item>
             <el-menu-item index="/components/grid">Grid 栅格</el-menu-item>
           </el-sub-menu>
+          <el-menu-item index="/components/table">Table</el-menu-item>
         </el-menu>
       </aside>
 

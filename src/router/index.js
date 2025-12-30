@@ -11,6 +11,11 @@ const routes = [
     name: 'Button',
     component: () => import('../view/components/Button.vue'),
   },
+  {
+    path: '/components/table',
+    name: 'Button',
+    component: () => import('../view/table/index.vue'),
+  },
 ]
 
 const router = createRouter({
