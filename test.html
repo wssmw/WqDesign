@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function myApply(context, argsArray) {
+        context = context || globalThis
+        // 判断进来的示例是否为空,如果为空则绑定为全局
+        context.fn = this
+        // 因为这里是函数调用myApply 所以这里的this指的是函数
+        const result = argsArray ? context.fn(...argsArray) : context.fn()
+        // 传递参数并执行函数拿到执行结果
+        delete context.fn // 删除fn,
+        return result // 返回结果
+      }
+      // 测试代码
+      const obj = { name: 'zhangsan' }
+      function test(age, gender) {
+        console.log(this.name, age, gender)
+      }
+      test.myApply = myApply
+      test.myApply(obj, [20, 'male']) // zhangsan 20 male
+    </script>
+  </body>
+</html>
